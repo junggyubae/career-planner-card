@@ -20,7 +20,7 @@ Ask (or infer): **upload a document**, or **explain more (interview)**?
 3. **Detect conflicts** against existing state (e.g. a role with different dates/titles).
    - On any conflict: **STOP and ask the user** which is correct. Never auto-resolve.
 4. **Route facts** to the right place (see table below). For each experience, write a file **with YAML frontmatter**.
-5. **Regenerate** `state/TIMELINE.md` from the experience frontmatter (reverse-chronological).
+5. **Regenerate** `state/TIMELINE.md` from the experience frontmatter (reverse-chronological), linking each entry title to its source file with a relative Markdown link such as `[Title](experience/YYYY-slug.md)`.
 6. **Never invent** facts not present in the source.
 
 > If the uploaded file is a CV/SOP **template** (`.tex`), leave it in `state/uploads/` for Alignment to use — don't extract it as experience.
@@ -32,7 +32,7 @@ Ask (or infer): **upload a document**, or **explain more (interview)**?
 3. Let the user **answer the subset they want** — unanswered questions don't block progress.
 4. **Iterate** with follow-ups until the user signals they're done.
 5. **Refine/enrich** the target file: add new detail *and* sharpen existing facts. Never overwrite prior content wholesale.
-6. **Regenerate** `state/TIMELINE.md` if an experience changed.
+6. **Regenerate** `state/TIMELINE.md` if an experience changed, preserving source links for each entry.
 
 ## Where facts live
 
@@ -44,19 +44,19 @@ Ask (or infer): **upload a document**, or **explain more (interview)**?
 | **values, beliefs, and how you act on them** (core identity) | `state/beliefs.md` |
 | short / mid / long-term goals | `goal/goals.md` |
 | raw uploaded document or user CV/SOP template | `state/uploads/` |
-| *(derived)* time-ordered index of experience | `state/TIMELINE.md` — regenerate, don't hand-edit |
+| *(derived)* time-ordered index of experience | `state/TIMELINE.md` — regenerate with links to source experience files, don't hand-edit |
 
 ## Experience frontmatter
 
 ```yaml
 ---
-title: Undergraduate Researcher, LDS Lab (SNU)
-type: research            # research | work | project | education | award | leadership | activity
-start: 2024-12            # YYYY-MM
-end: 2025-07              # YYYY-MM | present
-org: Seoul National University
-tags: [optimization, SAM]
-highlight: Adaptive SAM variant; MIT URTC 2024
+title: Community Robotics Workshop Mentor
+type: activity            # research | work | project | education | award | leadership | activity
+start: 2024-03            # YYYY-MM
+end: 2024-06              # YYYY-MM | present
+org: Neighborhood Makerspace
+tags: [robotics, teaching, outreach]
+highlight: Led weekend robotics workshops for local high-school students
 ---
 Prose detail the user writes/answers freely…
 ```
