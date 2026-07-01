@@ -1,8 +1,15 @@
 # Career Planner Card
 
-A **Darwinian Mind Card** for planning your next academic / research career step. This repo is the **shareable card** — logic only, **no personal data**. It's consumed by a project that holds your private, file-based memory (see [career-planner](https://github.com/junggyubae/career-planner)).
+A **Darwinian Mind Card** for planning your next academic / research career step. This repo is the **shareable card** — logic only, **no personal data**.
 
 Manifest: [`card.json`](card.json) — `@junggyubae/career-planner-card`.
+
+> ⚠️ **Cross-dependency — use only with the [`career-planner`](https://github.com/junggyubae/career-planner) project.**
+> This card is **not standalone**. Its skills read and write a specific memory/output layout
+> (`memory/basic-info/`, `memory/experience/_manager.md`, `output/_manager.md`, `output/<target>/…`)
+> that lives in the `career-planner` project. Applied to any other project, the skills have nowhere
+> to read or write. `career-planner` pins this card as a git submodule at `card/`; that is the
+> supported way to consume it.
 
 ## Skills (three blocks)
 
