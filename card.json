@@ -1,0 +1,12 @@
+{
+  "name": "@junggyubae/career-planner-card",
+  "version": "0.1.0",
+  "description": "Career planner Mind Card: build a private file-based career memory (upload/interview), find PIs/labs at a target school, and generate tailored CV + SOP (LaTeX to PDF) grounded in that memory.",
+  "skills": {
+    "include": [
+      "info-retrieval",
+      "finder",
+      "alignment"
+    ]
+  }
+}
