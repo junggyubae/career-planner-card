@@ -8,7 +8,7 @@ Manifest: [`card.json`](card.json) — `@junggyubae/career-planner-card`.
 
 The card is the **policy** `π(action | state, goal)`:
 
-- **`state/`** — who you are (past + present): identity, experience, interests, beliefs, understanding.
+- **`state/`** — who you are (past + present): identity, experience, interests, and **beliefs** (values + how you act on them — the irreducibly human core the card leans on hardest).
 - **`goal/`** — where you're going: short / mid / long-term goals.
 - **`action/`** — what you do about it: `discovery/` (Finder = explore) + `applications/` (Alignment = exploit).
 
@@ -38,7 +38,7 @@ Default LaTeX templates ship with the alignment skill at [`skills/alignment/temp
 
 ```bash
 # clone this git-backed card into your local drwn store
-drwn card clone git+https://github.com/junggyubae/career-planner-card.git#v0.2.0
+drwn card clone git+https://github.com/junggyubae/career-planner-card.git#v0.2.1
 # then apply it to a project (see darwinian apply-mind-card)
 ```
 

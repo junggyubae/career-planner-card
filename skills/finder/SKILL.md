@@ -13,7 +13,7 @@ Discover **Principal Investigators / labs** at a school the user names, ranked b
 
 ## Steps
 
-1. **Read `state/` and `goal/`:** `state/identity.md`, `state/experience/` (+ `TIMELINE.md`), `state/interests.md`, `state/beliefs.md`, `state/understanding.md`, and **`goal/goals.md`**.
+1. **Read `state/` and `goal/`:** `state/identity.md`, `state/experience/` (+ `TIMELINE.md`), `state/interests.md`, `state/beliefs.md` (values + how they act on them), and **`goal/goals.md`**.
 2. **Form a research profile:** skills, level (undergrad/MS/PhD-seeking), topical interests, **values/beliefs** (environment/style wanted), and **goal direction** (short/mid/long-term — e.g. academia vs industry).
 3. **Deep research the named school:** find PIs/labs whose work matches the profile. Prefer primary sources (lab pages, faculty directories, recent papers). Note recruiting signals when visible.
 4. **Rank by fit** against all three:

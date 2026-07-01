@@ -13,7 +13,7 @@ Given a **target URL**, produce a CV and SOP tailored to it, grounded strictly i
    - If `state/uploads/` contains a user template (e.g. `cv-template.tex`, `sop-template.tex`), use it.
    - Otherwise use the bundled defaults shipped **alongside this skill** at `templates/cv-template.tex` and `templates/sop-template.tex` (modern one-page academic CV). In an applied project this resolves to `card/skills/alignment/templates/`.
 2. **Fetch & analyze the target** at the URL: extract requirements, focus areas, keywords, and what the target values. If the page is unreachable, ask the user to paste the content.
-3. **Read `state/` and `goal/`:** `state/identity.md`, `state/experience/`, `state/interests.md`, `state/beliefs.md`, `state/understanding.md`, and `goal/goals.md`.
+3. **Read `state/` and `goal/`:** `state/identity.md`, `state/experience/`, `state/interests.md`, `state/beliefs.md` (values + how they act on them — the core of the SOP's voice), and `goal/goals.md`.
 4. **Match state ↔ target:** select the most relevant experience and framing. Use **`state/beliefs.md`** to argue genuine fit and set the SOP's voice; use **`goal/goals.md`** for the trajectory ("why this, why now, where it leads").
 5. **Render `.tex`:**
    - **CV** — fill the template's placeholders from `state` (header from `identity.md`, entries from `experience/`).
