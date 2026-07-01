@@ -50,13 +50,13 @@ Ask (or infer): **upload a document**, or **explain more (interview)**?
 
 ```yaml
 ---
-title: Community Robotics Workshop Mentor
+title: Honorary Member, SNU Tomorrow's Engineers Membership (STEM)
 type: activity            # research | work | project | education | award | leadership | activity
-start: 2024-03            # YYYY-MM
-end: 2024-06              # YYYY-MM | present
-org: Neighborhood Makerspace
-tags: [robotics, teaching, outreach]
-highlight: Led weekend robotics workshops for local high-school students
+start: 2024-09            # YYYY-MM
+end: present              # YYYY-MM | present
+org: SNU Tomorrow's Engineers Membership (STEM)
+tags: [mentoring, teaching, outreach, research]
+highlight: Mentored students through teaching, outreach, and research activities
 ---
 Prose detail the user writes/answers freely…
 ```
