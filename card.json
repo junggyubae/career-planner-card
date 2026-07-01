@@ -1,7 +1,7 @@
 {
   "name": "@junggyubae/career-planner-card",
-  "version": "0.1.1",
-  "description": "Career planner Mind Card. Designed to run ONLY inside the career-planner project — it depends on that project's memory/ and output/ layout. Build a private file-based career memory (upload/interview), find PIs/labs at a target school, and generate tailored CV + SOP (LaTeX to PDF) grounded in that memory.",
+  "version": "0.2.0",
+  "description": "Career planner Mind Card. Designed to run ONLY inside the career-planner project — it depends on that project's state/ goal/ action/ layout. Model: state (who you are) + goal (where you're going) → the card is the policy that produces action (discovery + applications). Build private career state via upload/interview, find PIs/labs at a target school, and generate tailored CV + SOP (LaTeX to PDF) grounded in that state.",
   "skills": {
     "include": [
       "info-retrieval",

@@ -1,11 +1,11 @@
 ---
 name: finder
-description: PI Finder (v1). Use when the user wants to discover next-step research opportunities. The user must name a TARGET SCHOOL; deep-research PIs/labs at that school and rank them by fit against the user's memory AND beliefs. Output a ranked report to output/. Internships/industry roles and school-less discovery are Phase 2 — out of scope.
+description: PI Finder (v1). Use when the user wants to discover next-step research opportunities. The user must name a TARGET SCHOOL; deep-research PIs/labs at that school and rank them by fit against the user's STATE (experience, interests, beliefs, understanding) AND GOAL (direction). Output a ranked report to action/discovery/. Internships/industry roles and school-less discovery are Phase 2 — out of scope.
 ---
 
 # Finder — PI Finder (v1)
 
-Discover **Principal Investigators / labs** at a school the user names, ranked by genuine fit.
+Discover **Principal Investigators / labs** at a school the user names, ranked by genuine fit. This is the **explore** half of `action/` — reading `state` + `goal` to surface paths.
 
 ## Preconditions
 
@@ -13,13 +13,14 @@ Discover **Principal Investigators / labs** at a school the user names, ranked b
 
 ## Steps
 
-1. **Read the full memory:** `basic-info/`, `experience/`, `interests/`, and **`beliefs/`**.
-2. **Form a research profile:** skills, level (undergrad/MS/PhD-seeking), topical interests, and **values/beliefs** (what environment and style the user wants).
+1. **Read `state/` and `goal/`:** `state/identity.md`, `state/experience/` (+ `TIMELINE.md`), `state/interests.md`, `state/beliefs.md`, `state/understanding.md`, and **`goal/goals.md`**.
+2. **Form a research profile:** skills, level (undergrad/MS/PhD-seeking), topical interests, **values/beliefs** (environment/style wanted), and **goal direction** (short/mid/long-term — e.g. academia vs industry).
 3. **Deep research the named school:** find PIs/labs whose work matches the profile. Prefer primary sources (lab pages, faculty directories, recent papers). Note recruiting signals when visible.
-4. **Rank by fit** against both:
+4. **Rank by fit** against all three:
    - **Topical fit** — interests + experience ↔ the lab's research.
-   - **Belief/values fit** — from `beliefs/` (mentorship style, lab culture, mission).
-5. **Write a report** to `output/pi-finder/<school>-<date>.md`.
+   - **Belief/values fit** — from `state/beliefs.md` (mentorship style, lab culture, mission).
+   - **Goal fit** — does this path serve the user's stated `goal/` trajectory?
+5. **Write a report** to `action/discovery/<school>-<date>.md`.
 
 ## Report format
 
@@ -29,15 +30,16 @@ For each PI (most-fitting first):
 ### <PI name> — <Lab name>
 - **Link:** <lab / faculty page URL>
 - **Area:** <research area>
-- **Why it fits (topical):** ties to specific memory facts (experience/interests)
-- **Why it fits (beliefs):** ties to specific values in beliefs/
+- **Why it fits (topical):** ties to specific facts in state/experience or state/interests
+- **Why it fits (beliefs):** ties to specific values in state/beliefs.md
+- **Why it fits (goal):** how it serves goal/goals.md
 - **Signal:** <recruiting note, recent relevant paper, etc.>
 ```
 
-End with a short **"gaps"** note: profile areas with no strong match at this school.
+End with a short **"gaps"** note: profile/goal areas with no strong match at this school.
 
 ## Guardrails
 
 - Never fabricate a PI, lab, or link — every entry must be a real, verifiable source.
-- Ground every "why it fits" in specific memory facts; don't hand-wave.
-- Read-only on `memory/`. Write only to `output/` (git-ignored).
+- Ground every "why it fits" in specific `state`/`goal` facts; don't hand-wave.
+- Read-only on `state/` and `goal/`. Write only to `action/` (git-ignored).
