@@ -1,6 +1,6 @@
 ---
 name: finder
-description: PI Finder (v1). Use when the user wants to discover next-step research opportunities. The user must name a TARGET SCHOOL; deep-research PIs/labs at that school and rank them by fit against the user's STATE (experience, interests, beliefs, understanding) AND GOAL (direction). Output a ranked report to action/discovery/. Internships/industry roles and school-less discovery are Phase 2 — out of scope.
+description: PI Finder (v1). Use when the user wants to discover next-step research opportunities. The user must name a TARGET SCHOOL; deep-research PIs/labs at that school and rank them by fit against the user's STATE (experience, interests, beliefs) AND GOAL (direction). Output a ranked report to action/discovery/. Internships/industry roles and school-less discovery are Phase 2 — out of scope.
 ---
 
 # Finder — PI Finder (v1)
