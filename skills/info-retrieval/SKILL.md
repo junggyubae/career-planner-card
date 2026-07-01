@@ -28,7 +28,7 @@ Ask (or infer): **upload a document**, or **explain more (interview)**?
 ## Path B — Interview → refine/enrich
 
 1. **Pick a topic** with the user: a specific experience, their interests, **beliefs** (values + how they act on them — the richest topic), or **goals**.
-2. **Present a LIST of focused questions** for that topic (not one at a time).
+2. **Generate the questions yourself, on the fly — there is no fixed question bank.** Compose a tailored **list** of focused questions for that topic, adapted to **what's already in `state`/`goal`**: probe the gaps, the *why* behind past choices, and concrete specifics; don't re-ask what's already recorded. For **beliefs** (the core identity), go deeper — values, the principles behind real decisions, trade-offs they'd defend, environments where they thrive vs. stall, and non-negotiables. Present the whole list at once (not one at a time).
 3. Let the user **answer the subset they want** — unanswered questions don't block progress.
 4. **Iterate** with follow-ups until the user signals they're done.
 5. **Refine/enrich** the target file: add new detail *and* sharpen existing facts. Never overwrite prior content wholesale.
