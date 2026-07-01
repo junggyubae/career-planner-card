@@ -2,6 +2,10 @@
 
 All notable changes to the Career Planner Card. Versions are git tags (`vX.Y.Z`).
 
+## v0.2.4
+- **info-retrieval:** regenerated `state/TIMELINE.md` entries should link each title back to its source experience Markdown file.
+- **docs:** replace identifying sample experience frontmatter with the STEM activity example and keep public skeleton docs non-personal.
+
 ## v0.2.3
 - **alignment:** escape LaTeX specials + translate non-Latin scripts; compile loop that reads the `.log`, fixes, and retries until the PDF builds; enforce a strictly one-page CV by trimming/tightening and recompiling.
 - **finder:** verifier pass confirming each PI is currently at the named school and active before ranking; excluded candidates surfaced in the gaps note.
