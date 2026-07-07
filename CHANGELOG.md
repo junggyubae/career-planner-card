@@ -2,6 +2,10 @@
 
 All notable changes to the Career Planner Card. Versions are git tags (`vX.Y.Z`).
 
+## v0.2.5
+- **alignment:** prefer Tectonic for lightweight PDF compilation, fall back to `pdflatex`, and allow complete `.tex` drafts when no compiler is installed.
+- **templates:** clarify that bundled LaTeX templates should compile with Tectonic or a vanilla `pdflatex` toolchain.
+
 ## v0.2.4
 - **info-retrieval:** regenerated `state/TIMELINE.md` entries should link each title back to its source experience Markdown file.
 - **docs:** replace identifying sample experience frontmatter with the STEM activity example and keep public skeleton docs non-personal.

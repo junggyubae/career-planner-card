@@ -23,9 +23,9 @@ The card is the **policy** `π(action | state, goal)`:
 |-------|---------|-------|--------|
 | [info-retrieval](skills/info-retrieval/SKILL.md) | Grow **state + goal** via **upload → refine** or **interview → refine/enrich**. Refine/enrich only; asks on conflict. | `state/uploads/`, `state/`, `goal/` | `state/`, `goal/` (incl. derived `state/TIMELINE.md`) |
 | [finder](skills/finder/SKILL.md) | **PI Finder** — name a school, deep-research PIs/labs there ranked by topical + belief + **goal** fit. | `state/`, `goal/` | `action/discovery/*.md` |
-| [alignment](skills/alignment/SKILL.md) | Target URL → tailored **CV + SOP**, LaTeX → PDF (`pdflatex`). | `state/`, `goal/` + template | `action/applications/<slug>/` + derived `BOARD.md` |
+| [alignment](skills/alignment/SKILL.md) | Target URL → tailored **CV + SOP**, LaTeX → PDF when available (`tectonic` preferred, `pdflatex` fallback). | `state/`, `goal/` + template | `action/applications/<slug>/` + derived `BOARD.md` |
 
-Default LaTeX templates ship with the alignment skill at [`skills/alignment/templates/`](skills/alignment/templates/) (modern one-page academic CV + matching SOP), used when the user has no template of their own.
+Default LaTeX templates ship with the alignment skill at [`skills/alignment/templates/`](skills/alignment/templates/) (modern one-page academic CV + matching SOP), used when the user has no template of their own. PDF compilation is optional for first-run onboarding; Tectonic is the preferred light compiler, and `pdflatex` remains a fallback.
 
 ## Invariants (all skills)
 
@@ -38,7 +38,7 @@ Default LaTeX templates ship with the alignment skill at [`skills/alignment/temp
 
 ```bash
 # clone this git-backed card into your local drwn store
-drwn card clone git+https://github.com/junggyubae/career-planner-card.git#v0.2.4
+drwn card clone git+https://github.com/junggyubae/career-planner-card.git#v0.2.5
 # then apply it to a project (see darwinian apply-mind-card)
 ```
 

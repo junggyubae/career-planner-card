@@ -1,11 +1,11 @@
 ---
 name: alignment
-description: Use when the user provides a target URL (a lab, internship, or job) and wants tailored application materials. Resolve a template (the user's own from state/uploads/ or the bundled default), analyze the target, match it against state + goal, and generate a tailored CV and SOP grounded strictly in state. Render as LaTeX and compile to PDF with pdflatex, auto-iterating on compile errors until the PDF builds; the CV must be strictly one page. Beliefs shape SOP voice and fit; goals shape the trajectory. Write an application bundle to action/applications/. Never fabricate.
+description: Use when the user provides a target URL (a lab, internship, or job) and wants tailored application materials. Resolve a template (the user's own from state/uploads/ or the bundled default), analyze the target, match it against state + goal, and generate a tailored CV and SOP grounded strictly in state. Render as LaTeX and compile to PDF with the lightest available compiler: tectonic first, then pdflatex; if neither is installed, leave complete .tex drafts and explain how to install Tectonic. The CV must be strictly one page when a compiler is available. Beliefs shape SOP voice and fit; goals shape the trajectory. Write an application bundle to action/applications/. Never fabricate.
 ---
 
 # Alignment — tailored CV + SOP from a target URL
 
-Given a **target URL**, produce a CV and SOP tailored to it, grounded strictly in the user's `state`, delivered as **`.tex` compiled to `.pdf`**. This is the **exploit** half of `action/` — committing to a specific target.
+Given a **target URL**, produce a CV and SOP tailored to it, grounded strictly in the user's `state`, delivered as **`.tex` plus `.pdf` when a lightweight PDF compiler is available**. This is the **exploit** half of `action/` — committing to a specific target.
 
 ## Steps
 
@@ -23,12 +23,23 @@ Given a **target URL**, produce a CV and SOP tailored to it, grounded strictly i
    - `target.md` — the analyzed target **with frontmatter** (see below) + requirements/keywords/coverage note.
    - `cv.tex`, `sop.tex` — the tailored materials.
    - `notes.md` — a stub for the user's own notes/emails/todos.
-7. **Compile — auto-iterate until the PDF is produced (required).** For both `cv.tex` and `sop.tex`:
+7. **Compile when a compiler is available.** Prefer Tectonic because it is much lighter than a full TeX Live/MacTeX install. For both `cv.tex` and `sop.tex`, choose the first available compiler:
+   1. `tectonic`
+   2. `pdflatex`
+   3. no compiler — leave complete `.tex` drafts and tell the user how to install Tectonic later
+
+   Tectonic command:
+   ```
+   tectonic --keep-logs --outdir action/applications/<target-slug> action/applications/<target-slug>/cv.tex
+   ```
+
+   pdflatex fallback:
    ```
    pdflatex -interaction=nonstopmode -output-directory action/applications/<target-slug> action/applications/<target-slug>/cv.tex
    ```
-   **If a compile fails, read the `.log`, find the offending line (almost always an unescaped char or an unsupported symbol/glyph), fix the `.tex`, and recompile. Loop until both `cv.pdf` and `sop.pdf` exist.** A run that ends without a built PDF is a failure — never stop there. The *only* acceptable no-PDF outcome is `pdflatex` genuinely not installed, in which case emit the `.tex` and tell the user how to install/compile.
-8. **Enforce a strict one-page CV.** After the CV compiles, check its page count. If it is **more than one page**, tighten and recompile — iterate until it is exactly **one page**:
+
+   **If a compile fails, read the `.log`, find the offending line (almost always an unescaped char or an unsupported symbol/glyph), fix the `.tex`, and recompile with the same compiler. Loop until both `cv.pdf` and `sop.pdf` exist.** A run that ends without a built PDF is acceptable only when neither `tectonic` nor `pdflatex` is installed; in that case, emit the `.tex` files, note that PDFs were skipped, and recommend installing Tectonic rather than full TeX Live.
+8. **Enforce a strict one-page CV when a compiler is available.** After the CV compiles, check its page count. If it is **more than one page**, tighten and recompile — iterate until it is exactly **one page**:
    1. first cut the **least-relevant** entries/bullets for *this* target;
    2. then **shorten wording** — concise phrasing, drop filler, compress descriptions;
    3. do **not** shrink the template's font size or margins to fake it.
@@ -54,5 +65,5 @@ url: https://…
 - **100% of claims must trace to `state`.** Never fabricate experience, skills, or dates.
 - Beliefs inform SOP voice **and** the fit argument; goals inform the trajectory — not just a list of experience.
 - Read-only on `state/` and `goal/`. Write only to `action/` (git-ignored).
-- Keep templates compiling on a vanilla `pdflatex` toolchain — avoid exotic packages.
-- **The deliverable is a built PDF, not a `.tex`.** Never hand back a `.tex` that failed to compile (unless `pdflatex` is absent) — iterate until it builds. The CV is **strictly one page**.
+- Keep templates compiling on Tectonic and a vanilla `pdflatex` toolchain — avoid exotic packages.
+- **The preferred deliverable is a built PDF plus `.tex`.** Never hand back a `.tex` that failed to compile when `tectonic` or `pdflatex` is available — iterate until it builds. If no compiler is installed, the `.tex` draft is a valid onboarding-friendly deliverable and the user can install Tectonic later. The CV is **strictly one page** when a compiler is available.
