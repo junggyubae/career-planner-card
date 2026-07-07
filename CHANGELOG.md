@@ -2,6 +2,14 @@
 
 All notable changes to the Career Planner Card. Versions are git tags (`vX.Y.Z`).
 
+## v0.2.8
+- **paper-briefing:** add a fifth skill for abstract-based PI/lab paper briefings between Finder and Alignment.
+- **finder:** replace flat `action/discovery/<school>-<date>.md` reports with generated `action/discovery/INDEX.md` plus per-PI folders: `action/discovery/<school-slug>-<pi-slug>/`.
+- **discovery:** add lab alumni/outcome notes, reach/target/safe fit bands, and connection mapping between the user's known PIs/mentors/network and target PIs.
+- **paper access:** make abstracts the default evidence layer; full-paper fetching/reading is opt-in when the user explicitly requests a paper summary or specific internal details.
+- **alignment:** reuse relevant discovery briefings for paper-grounded SOP talking points when available.
+- **SOP:** add a narrative standard for vivid, professional SOPs that keep the reader moving paragraph to paragraph.
+
 ## v0.2.7
 - **career-compass:** expand the skill instructions with the full step-by-step script, including opening language, detailed goal/recommendation/gap sections, awareness notes, output file instructions, and closing message.
 

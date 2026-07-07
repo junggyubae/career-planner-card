@@ -1,6 +1,14 @@
 ---
 name: info-retrieval
-description: Use to build and enrich the user's career STATE and GOALs. Two paths — (1) UPLOAD: the user provides a document (CV, SOP, transcript), save it to state/uploads/ and refine its facts into state/ (identity, experience, interests, beliefs) and goal/; (2) INTERVIEW: the user wants to say more about a topic (an experience, interests, beliefs, or goals), present a list of focused questions then iterate, and refine/enrich the target file. Beliefs (values + how you act on them) are the user's core identity — invest most there. Both paths only refine/enrich — never overwrite. Ask on any conflict.
+description: >-
+  Use to build and enrich the user's career STATE and GOALs. Two paths: (1)
+  UPLOAD, where the user provides a document (CV, SOP, transcript), save it to
+  state/uploads/ and refine its facts into state/ (identity, experience,
+  interests, beliefs) and goal/; (2) INTERVIEW, where the user wants to say more
+  about a topic (an experience, interests, beliefs, or goals), present a list of
+  focused questions then iterate, and refine/enrich the target file. Beliefs
+  (values + how you act on them) are the user's core identity, so invest most
+  there. Both paths only refine/enrich, never overwrite. Ask on any conflict.
 ---
 
 # Info Retrieval

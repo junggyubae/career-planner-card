@@ -39,7 +39,7 @@ Read these files if they exist:
 - `state/TIMELINE.md`
 - `state/experience/*.md`
 - `goal/goals.md`
-- recent `action/discovery/*.md`
+- recent `action/discovery/**/*.md`
 - recent `action/applications/*/target.md`
 
 If files are missing, note them as gaps instead of assuming.
