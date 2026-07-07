@@ -39,7 +39,7 @@ Default LaTeX templates ship with the alignment skill at [`skills/alignment/temp
 
 ```bash
 # clone this git-backed card into your local drwn store
-drwn card clone git+https://github.com/junggyubae/career-planner-card.git#v0.2.6
+drwn card clone git+https://github.com/junggyubae/career-planner-card.git#v0.2.7
 # then apply it to a project (see darwinian apply-mind-card)
 ```
 

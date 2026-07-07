@@ -1,6 +1,6 @@
 {
   "name": "@junggyubae/career-planner-card",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "description": "Career planner Mind Card. Designed to run ONLY inside the career-planner project — it depends on that project's state/ goal/ action/ layout. Model: state (who you are — incl. beliefs, the core identity) + goal (where you're going) → the card is the policy that produces action (roadmaps + discovery + applications). Build private career state via upload/interview, create Career Compass roadmaps, find PIs/labs at a target school, and generate tailored CV + SOP grounded in that state.",
   "skills": {
     "include": [

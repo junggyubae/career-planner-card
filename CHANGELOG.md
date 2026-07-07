@@ -2,6 +2,9 @@
 
 All notable changes to the Career Planner Card. Versions are git tags (`vX.Y.Z`).
 
+## v0.2.7
+- **career-compass:** expand the skill instructions with the full step-by-step script, including opening language, detailed goal/recommendation/gap sections, awareness notes, output file instructions, and closing message.
+
 ## v0.2.6
 - **career-compass:** add a fourth skill for grounded trajectory reviews, short-/mid-/long-term goals, next-step recommendations, gaps, awareness notes, and roadmap reports under `action/roadmap/`.
 
