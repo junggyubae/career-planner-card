@@ -10,18 +10,19 @@ The card is the **policy** `π(action | state, goal)`:
 
 - **`state/`** — who you are (past + present): identity, experience, interests, and **beliefs** (values + how you act on them — the irreducibly human core the card leans on hardest).
 - **`goal/`** — where you're going: short / mid / long-term goals.
-- **`action/`** — what you do about it: `discovery/` (Finder = explore) + `applications/` (Alignment = exploit).
+- **`action/`** — what you do about it: `roadmap/` (Career Compass = orient), `discovery/` (Finder = explore), and `applications/` (Alignment = exploit).
 
 > ⚠️ **Cross-dependency — use only with the [`career-planner`](https://github.com/junggyubae/career-planner) project.**
 > This card is **not standalone**. Its skills read/write the `state/ goal/ action/` layout that lives in the
 > `career-planner` project. Applied to any other project, the skills have nowhere to read or write.
 > `career-planner` pins this card as a git submodule at `card/`; that is the supported way to consume it.
 
-## Skills (three blocks)
+## Skills (four blocks)
 
 | Skill | Purpose | Reads | Writes |
 |-------|---------|-------|--------|
 | [info-retrieval](skills/info-retrieval/SKILL.md) | Grow **state + goal** via **upload → refine** or **interview → refine/enrich**. Refine/enrich only; asks on conflict. | `state/uploads/`, `state/`, `goal/` | `state/`, `goal/` (incl. derived `state/TIMELINE.md`) |
+| [career-compass](skills/career-compass/SKILL.md) | Trajectory review — short-/mid-/long-term goals, readiness map, next steps, gaps, and awareness notes. | `state/`, `goal/`, recent `action/` | `action/roadmap/*.md` + derived `ROADMAP.md` |
 | [finder](skills/finder/SKILL.md) | **PI Finder** — name a school, deep-research PIs/labs there ranked by topical + belief + **goal** fit. | `state/`, `goal/` | `action/discovery/*.md` |
 | [alignment](skills/alignment/SKILL.md) | Target URL → tailored **CV + SOP**, LaTeX → PDF when available (`tectonic` preferred, `pdflatex` fallback). | `state/`, `goal/` + template | `action/applications/<slug>/` + derived `BOARD.md` |
 
@@ -38,7 +39,7 @@ Default LaTeX templates ship with the alignment skill at [`skills/alignment/temp
 
 ```bash
 # clone this git-backed card into your local drwn store
-drwn card clone git+https://github.com/junggyubae/career-planner-card.git#v0.2.5
+drwn card clone git+https://github.com/junggyubae/career-planner-card.git#v0.2.6
 # then apply it to a project (see darwinian apply-mind-card)
 ```
 
